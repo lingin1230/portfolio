@@ -1,0 +1,908 @@
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+
+    font-family: 'Encode Sans SC', sans-serif !important;
+    letter-spacing: 2px;
+    overflow-x: hidden;
+}
+
+/* ---------- Header 區域 ---------- */
+
+#header .spin {
+    transform: rotate(90deg);
+    transition: .3s;
+}
+    @media screen and (max-width: 992px) {
+        #header .nav-item {
+            text-align: right;
+        }
+    }
+
+/* ---------- Contact Card 區域 ---------- */
+
+.contact-card .modal-content {
+    /* background-image: url('img/card-bg.jpg'); */
+    /* background-size: cover ; */
+    border: none;
+    padding: 50px 20px;
+    border-radius: 20px;
+    margin-top: 20%;
+}
+.contact-card .contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.contact-card img {
+    border-radius: 100%;
+    max-width: 215px;
+}
+.contact-card .email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-card .email .title {
+    color: #AAA;
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+.contact-card .email a {
+    color: #AAA;
+    border: 2px solid #AAA;
+    border-radius: 1000px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+}
+.contact-card .email a:hover {
+    background-color: #AAA;
+    color: #FFF;
+}
+.contact-card .email a i {
+    font-size: 25px;
+    margin-right: 15px;
+}
+    
+    @media screen and (max-width: 992px) {
+        .contact-card .modal-content {
+            padding: 30px 20px;
+        }
+        .contact-card img {
+            max-width: 150px;
+        }
+        .contact-card .email .title {
+            font-size: 25px;
+        }
+        .contact-card .email a {
+            padding: 8px 15px;
+            font-size: 13px;
+        }
+    }
+    @media screen and (max-width: 414px) {
+        .contact-card .contact-content {
+            flex-direction: column;
+        }
+        .contact-card img {
+            max-width: 150px;
+            margin-top: 30px;
+        }
+        .contact-card .email .title {
+            margin-bottom: 10px;
+        }
+    }
+    
+
+
+/* ---------- 主頁 Banner 區域 ---------- */
+
+#banner .block {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#banner .banner-dot {
+    width:100%;
+    position: relative;
+    z-index: 100;
+}
+#banner #dot1 {
+    position: absolute;
+    margin-top: -25px;
+    left: -5%;
+    width: 175px;
+}
+#banner #dot2 {
+    position: absolute;
+    margin-top: 100px;
+    left: 20%;
+    width: 30px;
+}
+#banner #dot4 {
+    position: absolute;
+    margin-top: 350px;
+    left: 60%;
+    width: 250px;
+}
+#banner #dot5 {
+    position: absolute;
+    margin-top: 275px;
+    left: 25%;
+    width: 150px;
+}
+#banner #dot6 {
+    position: absolute;
+    margin-top: 250px;
+    left: 85%;
+    width: 100px;
+}
+
+#banner .banner-drop {
+    width:100%;
+    position: relative;
+    z-index: 100;
+}
+#banner #drop1 {
+    position: absolute;
+}
+
+#banner .block #banner-hello {
+    position: absolute;
+    width: 100%;
+    animation-name:hello-in;
+    animation-duration:2s;
+}
+@keyframes hello-in{
+    0%{
+        margin-top: -100px;
+    }
+    100%{
+        margin-top: 0px;
+    }
+}
+#banner .block #banner-bg {
+    width: 100%;
+    margin-top: -50px;
+    animation-name: bg-in;
+    animation-duration: 2s;
+}
+@keyframes bg-in{
+    0%{
+        margin-top: 0px;
+    }
+    100%{
+        margin-top: -50px;
+    }
+}
+
+#descript {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    font-size: 18px;
+    line-height: 50px;
+    font-weight: 300;
+    text-align: center;
+}
+
+#descript p{
+    color: #FFF !important;
+    margin-top: 100px;
+}
+
+#descript.active p {
+    margin-top: 0px;
+    color: #000 !important;
+    display: block;
+    transition: 2s;
+}
+
+
+    @media screen and (max-width: 1200px) { 
+        #banner .block {
+            height: 450px;
+        }
+        #banner #dot4 {
+            width: 200px;
+        }
+    }
+    @media screen and (max-width: 992px) { 
+        #banner .block {
+            height: 400px;
+        }
+        #banner .block #banner-bg {
+            width: auto;
+            height: calc(100% + 50px);
+        }
+        #banner .block #banner-hello {
+            width: auto;
+            height: calc(100% + 50px);
+            right: 0;
+        }
+        #banner #dot1 {
+            width: 130px;
+        }
+        #banner #dot2 {
+            margin-top: 80px;
+            left: 25%;
+            width: 20px;
+        }
+        #banner #dot4 {
+            margin-top: 275px;
+            width: 225px;
+        }
+        #banner #dot5 {
+            margin-top: 180px;
+            left: 25%;
+            width: 125px;
+        }
+        #banner #dot6 {
+            margin-top: 200px;
+            left: 90%;
+            width: 65px;
+        }
+        #descript {
+            font-size: 15px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        #banner .block {
+            height: 400px;
+        }
+        #banner .block #banner-bg {
+            /* width: auto; */
+            height: calc(100% + 50px);
+            left: 20%;
+        }
+        #banner .block #banner-hello {
+            /* width: auto; */
+            height: 100%;
+            /* right: 0; */
+        }
+        #banner #dot1 {
+            width: 110px;
+        }
+        #banner #dot2 {
+            margin-top: 70px;
+            left: 20%;
+            width: 18px;
+        }
+        #banner #dot4 {
+            margin-top: 300px;
+            width: 150px;
+        }
+        #banner #dot5 {
+            left: 30%;
+            margin-top: 160px;
+            width: 90px;
+        }
+        #banner #dot6 {
+            margin-top: 180px;
+            width: 40px;
+        }
+        #descript {
+            font-size: 15px;
+            line-height: 40px;
+            height: 400px;
+        }
+    }
+    @media screen and (max-width: 415px) {
+
+        #banner .block {
+            height: 300px;
+        }
+        #banner .block #banner-bg {
+            /* width: auto; */
+            height: calc(100% + 50px);
+            left: 50%;
+        }
+        #banner .block #banner-hello {
+            width: 130%;
+            height: auto;
+        }
+        #banner #dot1 {
+            width: 75px;
+        }
+        #banner #dot2 {
+            width: 12px;
+            margin-top: 50px;
+        }
+        #banner #dot4 {
+            margin-top: 225px;
+            width: 110px;
+        }
+        #banner #dot5 {
+            margin-top: 120px;
+            width: 60px;
+        }
+        #banner #dot6 {
+            margin-top: 150px;
+            width: 25px;
+        }
+    }
+    @media screen and (max-width: 321px) {
+        #banner .block {
+            height: 250px;
+        }
+        #banner #dot1 {
+            width: 60px;
+        }
+        #banner #dot2 {
+            width: 12px;
+            margin-top: 50px;
+        }
+        #banner #dot4 {
+            margin-top: 200px;
+            width: 90px;
+        }
+        #banner #dot5 {
+            margin-top: 90px;
+            width: 50px;
+        }
+        #banner #dot6 {
+            margin-top: 150px;
+            width: 25px;
+        }
+    }
+
+
+
+
+/* ---------- 作品集內容區 ---------- */
+
+/* #work .title {
+    height: 25px;
+    border-radius: 13px;
+    text-align: center;
+    padding-top: 12px;
+    font-weight: 500;
+} */
+
+#work .descript {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 16px;
+    /* font-size: 1.15vw; */
+    line-height: 50px;
+    font-weight: 300;
+}
+
+#work .arrow-right {
+    position: absolute;
+    right: 50px;
+    bottom: 30px;
+    /* color: #C19A9A; */
+    font-size: 70px;
+    z-index: 101;
+    animation-name: arrow-move;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+}
+@keyframes arrow-move {
+    0%{
+        right: 30px;
+    }
+    50%{
+        right: 40px;
+    }
+    100%{
+        right: 30px;
+    }
+}
+#work .cover {
+    position: relative;
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 7px #CCC;
+    padding: 0;
+}
+#work .cover-pic{
+    width: 100%;
+    box-shadow: 2px 2px 7px #CCC;
+    transition: .5s;
+}
+
+#work .cover-pic:hover {
+    transform: scale(1.05);
+}
+
+/* --- 網頁開發 --- */
+#web-development{
+    margin-top: 20%;
+    opacity: 0;
+    transition: 2s;
+}
+#web-development.active{
+    margin-top: 0%;
+    opacity: 1;
+}
+#web-development .arrow-right {
+    color: #C19A9A;
+}
+
+#development-modal .modal-content{
+    padding: 50px 20px;
+    border-radius: 20px;
+    margin-top: 10%;
+
+    display: flex;
+    flex-direction: row;
+    padding: 10% 5%;
+}
+
+#development-modal .modal-content .content {
+    padding: 0 2%;
+    width: 33.333%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+#development-modal .modal-content .content .title {
+    font-size: 20px;
+    /* font-weight: bold; */
+    margin: 2vw 0 1vw 0;
+}
+#development-modal .modal-content .content a{
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+
+    opacity: .65;
+    transition: .3s;
+}
+#development-modal .modal-content .content a:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+#development-modal .modal-content .content a .not-yet {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(255, 217, 0);
+    color: #000;
+    top: 40%;
+    
+    height: 20%;
+}
+#development-modal .modal-content .content a img{
+    width: 100%;
+}
+
+#development-modal .modal-content .content p {
+    font-size: 13px;
+    text-align: center;
+    font-weight: 400;
+}
+
+
+
+/* --- 網頁優化 --- */
+#web-optimization{
+    margin-top: 20%;
+    opacity: 0;
+    transition: 2s;
+}
+#web-optimization.active{
+    margin-top: 150px;
+    opacity: 1;
+}
+#web-optimization .arrow-right {
+    color: #7E9AF2;
+}
+
+/* --- 平面設計 --- */
+#graphic-design{
+    margin-top: 20%;
+    opacity: 0;
+    transition: 2s;
+}
+#graphic-design.active{
+    margin-top: 150px;
+    opacity: 1;
+}
+#graphic-design .arrow-right {
+    color: #FFD400;
+}
+
+/* --- 攝影作品 --- */
+#photography{
+    margin-top: 20%;
+    opacity: 0;
+    transition: 2s;
+}
+#photography.active{
+    margin-top: 150px;
+    opacity: 1;
+}
+#photography .arrow-right {
+    color: #FC5F20;
+}
+.photo-cover {
+    /* width: 540px;
+    height: 540px; */
+    width: 100%;
+    height: 100%;
+
+    background-image: url('img/cover-pho.jpg');
+    background-size: cover;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 100;
+    transition: .5s;
+}
+#photography:hover .photo-cover {
+    display: none;
+    
+}
+.insta-block {
+    position: relative;
+    overflow-y: hidden;
+
+    width: 100%;
+    padding-bottom:100%; 
+    height: 0;
+}
+.insta-scroll {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#insta-content a {
+    display: inline-block;
+    width: 31%;
+    height: 31%;
+
+    margin: 1% 1% 0 0 ;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.insta-pic {
+    min-width: 100%;
+    height: 100%;
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-right: 4%;
+
+    position: absolute;
+    bottom: 0px;
+}
+.dot {
+    margin-right: 15px;
+    cursor: pointer;
+    color: #AAA;
+    font-size: 13px;
+}
+.tap1 {
+    margin-top: 0px;
+    transition: .5s;
+}
+.tap2 {
+    margin-top: -100%;
+    transition: .5s;
+}
+.tap3 {
+    margin-top: -200%;
+    transition: .5s;
+}
+
+    @media screen and (max-width: 992px) {
+        #work .descript {
+            font-size: 14px;
+            line-height: 38px;
+            letter-spacing: 1px;
+        }
+        
+        #development-modal .modal-content{
+            flex-direction: column;
+        }
+        #development-modal .modal-content .content {
+            padding: 0 5%;
+            width: 100%;
+            margin-bottom: 15%;
+        }
+        #development-modal .modal-content .content:last-child {
+            margin-bottom: 0%;
+        }
+        #development-modal .modal-content .content .title {
+            font-size: 3vw;
+        }
+        #development-modal .modal-content .content a{
+            margin: 5vw 0;
+            opacity: 1;
+        }
+        #development-modal .modal-content .content p {
+            font-size: 2vw;
+        }
+
+
+    }
+    @media screen and (max-width:768px) { 
+        #work .descript {
+            margin-top: 50px;
+            font-size: 13px;
+            line-height: 30px;
+            letter-spacing: 1px;
+        }
+        .dots {
+            bottom: -20px;
+        }
+        #web-optimization .descript {
+            order: 2;
+        }
+        .tap1 {
+            margin-top: 0px;
+            transition: .5s;
+        }
+        .tap2 {
+            margin-top: -100.5%;
+            transition: .5s;
+        }
+        .tap3 {
+            margin-top: -201%;
+            transition: .5s;
+        }
+    }
+
+/* ---------- About 區域 ---------- */
+
+#about {
+    margin-top: 250px;
+}
+#about .content {
+    margin-top: 100px;
+}
+#about .title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+#about .sub-title {
+    text-align: right;
+}
+    @media screen and (max-width:768px) { 
+        #about .sub-title {
+            text-align: center;
+        }
+        #about li {
+            text-align: center;
+        }
+    }
+#about ul {
+    padding: 20px;
+}
+#about ul li {
+    list-style: none;
+    line-height: 70px;
+}
+#about .skill img {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    box-shadow: 0px 0px 20px rgba(170, 170, 170, 0.527);
+    border-radius: 7px;
+}
+#about .purpose, #about .additional {
+    color: #a1a1a1;
+}
+#about .additional img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+
+/* ---------- Footer 區域 ---------- */
+
+#footer {
+    margin-top: 500px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 12px;
+    color: #AAA;
+}
+
+/* ---------- */
+
+.w-100pc {
+    width: 100%;
+}
+
+.border-10 {
+    border-radius: 10px;
+}
+
+.hamburger {
+    height: 510px;
+    border: none;
+    border-radius: 10px;overflow: hidden;
+    box-sizing: content-box;
+
+    animation : ooxx 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ooxx {
+    0%{
+        border: 4px solid rgb(255, 199, 0, .5);
+    }
+    50%{
+        border: 4px solid rgb(255, 99, 0, .5);
+    }
+    100%{
+        border: 4px solid  rgb(255, 199, 0, .5);
+    }
+  
+  }
+
+
+/* ---------- 背景動圖 ---------- */
+
+.ball {
+    position: fixed;
+    z-index: -1;
+    border-radius: 1000px;
+
+
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+  }
+#ball1 {
+    width: 500px;
+    height: 500px;
+    background-color: #c08e5513;
+    
+    animation-name: ball1;
+    animation-duration: 35s;
+    margin: -30% -30% -30% -30%;
+}
+@keyframes ball1 {
+    0%{
+        margin: -30% -30% -30% -30%;
+    }
+    25%{
+        margin: 100% -30% -30% 100%;
+    }
+    50%{
+        margin: -30% -30% -30% 100%;
+    }
+    75%{
+        margin: 100% -30% -30% -30%;
+    }
+    100%{
+        margin: -30% -30% -30% -30%;
+    }
+}
+#ball2 {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(188, 143, 143, 0.07);
+    animation-name: ball2;
+    animation-duration: 40s;
+
+    margin: 100% -30% -30% 100%;
+}
+
+@keyframes ball2 {
+    0%{
+        margin: 100% -30% -30% 100%;
+    }
+    25%{
+        margin: -30% -30% -30% 100%;
+    }
+    50%{
+        margin: 100% -30% -30% -30% ;
+    }
+    75%{
+        margin: -30% -30% -30% -30%;
+    }
+    100%{
+        margin: 100% -30% -30% 100%;
+    }
+}
+#ball3 {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(170, 170, 170, 0.03);
+    animation-name: ball3;
+    animation-duration: 45s;
+
+    margin: -30% -30% -30% 100%;
+}
+@keyframes ball3 {
+    0%{
+        margin: -30% -30% -30% 100%;
+    }
+    25%{
+        margin: -30% -30% -30% -30%;
+    }
+    50%{
+        margin: 100% -30% -30% 100%;
+    }
+    75%{
+        margin: -30% -30% -30% 100%;
+    }
+    100%{
+        margin: 100% -30% -30% -30%;
+    }
+}
+#ball4 {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(170, 170, 170, 0.05);
+    animation-name: ball4;
+    animation-duration: 40s;
+
+    margin: 100% -30% -30% -30%; 
+}
+@keyframes ball4 {
+    0%{
+        margin: 100% -30% -30% -30%; 
+    }
+    25%{
+        margin: -30% -30% -30% 100%;
+    }
+    50%{
+        margin: -30% -30% -30% -30%;
+    }
+    75%{
+        margin: 100% -30% -30% 100%;
+    }
+    100%{
+        margin: 100% -30% -30% -30%; 
+    }
+}
+
+/* ---------- 浮動按鈕 ---------- */
+
+#to-top {
+    opacity: 0;
+    transition: 1s;
+}
+#to-top.active {
+    opacity: 1;
+}
+#to-top a{
+    position: fixed;
+    font-size: 30px;
+    right: 50px;
+    bottom: 50px;
+    z-index: 100;
+    color: #AAA;
+    cursor: pointer;
+}
+
+
+
+.iframe-test {
+    width: 100%;
+    height: 100%;
+}
+.test .modal-content{
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 2px 2px 7px rgb(94, 94, 94)
+}
+.test .modal-body {
+    height: 700px;
+    padding: 0;
+}
